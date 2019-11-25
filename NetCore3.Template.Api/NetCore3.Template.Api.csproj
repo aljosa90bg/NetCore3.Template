@@ -12,4 +12,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.0.0-rc4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NetCore3.Template.Domain\NetCore3.Template.Domain.csproj" />
+    <ProjectReference Include="..\NetCore3.Template.Infrastructure\NetCore3.Template.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

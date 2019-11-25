@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Profiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetCore3.Template.Data\NetCore3.Template.Data.csproj" />
+    <ProjectReference Include="..\NetCore3.Template.Domain\NetCore3.Template.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
