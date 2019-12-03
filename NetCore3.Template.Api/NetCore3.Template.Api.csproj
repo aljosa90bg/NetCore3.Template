@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\rs-aljlojp-01\Projects\NetCore3.Template\NetCore3.Template.Api\NetCore3.Template.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="8.5.1" />
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />

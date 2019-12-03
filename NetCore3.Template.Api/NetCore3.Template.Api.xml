@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetCore3.Template.Api</name>
+    </assembly>
+    <members>
+        <member name="T:NetCore3.Template.Api.Constants.DefaultRouteDescriptions">
+            <summary>
+            Descriptions of default responses
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.DefaultRouteDescriptions.PostSuccessfulResponse">
+            <summary>
+            Default POST response for status code 200
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.DefaultRouteDescriptions.GetSuccessfulResponse">
+            <summary>
+            Default GET response for status code 200
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.DefaultRouteDescriptions.SuccessfulResponse">
+            <summary>
+            Default successful response
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.DefaultRouteDescriptions.SuccessfulIdentityResult">
+            <summary>
+            Default response for status code 200 when response is <see cref="T:Microsoft.AspNetCore.Identity.IdentityResult"/>
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.DefaultRouteDescriptions.NoContent">
+            <summary>
+            Default no content response
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.DefaultRouteDescriptions.BadRequest">
+            <summary>
+            Default response for status code 400
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.DefaultRouteDescriptions.DeleteSuccessful">
+            <summary>
+            Default DELETE response for status code 200
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.DefaultRouteDescriptions.NotFound">
+            <summary>
+            Default not found response
+            </summary>
+        </member>
+        <member name="T:NetCore3.Template.Api.Constants.Routes">
+            <summary>
+            Route constants for the User Store API
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.Routes.WeatherForecastBase">
+            <summary>
+            Roles endpoint
+            </summary>
+        </member>
+        <member name="T:NetCore3.Template.Api.Constants.Versions">
+            <summary>
+            API version constants
+            </summary>
+        </member>
+        <member name="F:NetCore3.Template.Api.Constants.Versions.Version1">
+            <summary>
+            API Version 1
+            </summary>
+        </member>
+        <member name="T:NetCore3.Template.Api.Startup">
+            <summary>
+            Application configuration start up.
+            </summary>
+        </member>
+        <member name="P:NetCore3.Template.Api.Startup.Configuration">
+            <summary>
+            Application settings configuration property.
+            </summary>
+        </member>
+        <member name="M:NetCore3.Template.Api.Startup.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NetCore3.Template.Api.Startup"/> class.
+            </summary>
+            <param name="env">The env.</param>
+        </member>
+        <member name="M:NetCore3.Template.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:NetCore3.Template.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

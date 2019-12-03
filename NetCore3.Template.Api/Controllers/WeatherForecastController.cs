@@ -34,8 +34,7 @@ namespace NetCore3.Template.Api.Controllers
         [SwaggerResponse(StatusCodes.Status200OK, DefaultRouteDescriptions.GetSuccessfulResponse, typeof(IEnumerable<WeatherForecast>))]
         [SwaggerResponse(StatusCodes.Status204NoContent, DefaultRouteDescriptions.NoContent)]
         [SwaggerResponse(StatusCodes.Status400BadRequest, DefaultRouteDescriptions.BadRequest, typeof(IEnumerable<ValidationFailure>))]
-        // TODO: Create NotFoundException class
-        //[SwaggerResponse(StatusCodes.Status404NotFound, DefaultRouteDescriptions.NotFound, typeof(IEnumerable<NotFoundException>))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, DefaultRouteDescriptions.NotFound)]
         public async Task<IEnumerable<WeatherForecast>> Get()
         {
             var rng = new Random();

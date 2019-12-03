@@ -9,7 +9,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -41,7 +40,10 @@ namespace NetCore3.Template.Api
             Configuration = builder.Build();
         }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container.
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -69,40 +71,9 @@ namespace NetCore3.Template.Api
                 c.SwaggerDoc("v1.0", new OpenApiInfo
                 {
                     Version = "v1.0",
-                    Title = "Svea Authentication User Store API",
-                    Description = "An API for authentication user store access and management."
+                    Title = ".NET Core 3.0 Template API",
+                    Description = "An API to use as a template for future migrations to .NET Core 3.0."
                 });
-
-                // Test second version
-                //c.SwaggerDoc("v2.0", new OpenApiInfo
-                //{
-                //    Version = "v2.0",
-                //    Title = "Svea Authentication User Store API",
-                //    Description = "An API for authentication user store access and management."
-                //});
-
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
-                {
-                    In = ParameterLocation.Header,
-                    Description = "Please enter into field the word 'Bearer' following by space and token",
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.ApiKey
-                });
-
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
-                        },
-                        new List<string>()
-                    }
-                });
-
-                // TODO: Setup filters
-                //c.OperationFilter<RemoveVersionFromParameter>();
-                //c.DocumentFilter<ReplaceVersionWithExactValueInPath>();
 
                 // Ensure the routes are added to the right Swagger doc
                 c.DocInclusionPredicate((version, desc) =>
@@ -123,7 +94,11 @@ namespace NetCore3.Template.Api
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -137,9 +112,10 @@ namespace NetCore3.Template.Api
 
             app.UseAuthorization();
 
+            app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Svea Authentication User Store API V1.0");
+                c.SwaggerEndpoint("/swagger/v1.0/swagger.json", ".NET Core 3.0 Template API V1.0");
                 c.RoutePrefix = string.Empty;
                 c.DocExpansion(DocExpansion.None);
             });
