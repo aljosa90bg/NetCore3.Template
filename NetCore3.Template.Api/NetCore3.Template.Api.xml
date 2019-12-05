@@ -54,7 +54,7 @@
             Route constants for the User Store API
             </summary>
         </member>
-        <member name="F:NetCore3.Template.Api.Constants.Routes.WeatherForecastBase">
+        <member name="F:NetCore3.Template.Api.Constants.Routes.ApplicationUserBase">
             <summary>
             Roles endpoint
             </summary>
@@ -68,6 +68,17 @@
             <summary>
             API Version 1
             </summary>
+        </member>
+        <member name="T:NetCore3.Template.Api.Controllers.ApplicationUserController">
+            <summary>
+            ApplicationUser Controller
+            </summary>
+        </member>
+        <member name="M:NetCore3.Template.Api.Controllers.ApplicationUserController.#ctor(Microsoft.Extensions.Logging.ILogger{NetCore3.Template.Api.Controllers.ApplicationUserController})">
+            <summary>
+            ApplicationUserController constructor
+            </summary>
+            <param name="logger"></param>
         </member>
         <member name="T:NetCore3.Template.Api.Startup">
             <summary>

@@ -10,6 +10,6 @@
         /// <summary>
         /// Roles endpoint
         /// </summary>
-        public const string WeatherForecastBase = BaseUri + "/weatherforecast";
+        public const string ApplicationUserBase = BaseUri + "/applicationuser";
     }
 }
